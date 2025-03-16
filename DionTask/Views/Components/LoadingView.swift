@@ -1,18 +1,19 @@
-//
-//  LoadingView.swift
-//  DionTask
-//
-//  Created by Marios Ioannou on 16/3/25.
-//
-
 import SwiftUI
 
 struct LoadingView: View {
+    
+    var message: String = "Loading..."
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
-}
+        
+        VStack(spacing: 12) {
+            ProgressView()
+                .scaleEffect(1.5)
 
-#Preview {
-    LoadingView()
+            Text(message)
+                .font(.subheadline)
+                .foregroundColor(.gray)
+        }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+    }
 }

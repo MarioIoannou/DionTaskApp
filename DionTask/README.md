@@ -1,81 +1,64 @@
-# Marvel Characters App
+# DionTask
 
-A simple iOS app that shows Marvel characters and their comics using the Marvel API.
+This is a Dion Mobile Engineer task for an iOS app that integrates the Marvel Comics API to create an engaging experience, 
+showcasing Marvel characters and their comic appearances.
 
-## 📱 What the App Does
+## What the App Does
 
-- Shows a list of Marvel characters
-- You can tap on a character to see their details
-- In the details, you can see the character's comics
-- You can swipe up/down to see different characters
-- Loads more characters as you scroll
+- Shows a list of Marvel characters.
+- You can tap on a Marvel character to see their details.
+- In the details, you can see the Marvel character's comics.
+- You can swipe right and left to see different characters from Marvel.
+- Loads comic once you tap Marvel's character comic.
 
-## 🛠 Setup Instructions
+## Setup Instructions
 
-1. Open Xcode
-2. Open the project by clicking: `File > Open` and select the `task2.xcodeproj` file
-3. Wait for Xcode to load everything
-4. Click the Play ▶️ button to run the app
+1. Open Xcode.
+2. Open the project by clicking: `File > Open` and select the `task2.xcodeproj` file.
+3. Wait for Xcode to load everything.
+4. Click the Play button to run the app.
 
-## 📂 Project Structure
+## Project Structure
 
 The app is organized in folders:
 
 ```
-task2/
-├── Views/                  # All the app screens
-│   ├── Components/         # Reusable UI components
-│   ├── MarvelCharactersList/    # Main screen
-│   └── MarvelCharacterDetails/  # Details screen
-├── Models/                # Data models
-├── ViewModels/           # Business logic
-├── Services/             # API calls
-└── Utils/               # Helper stuff
+DionTask/
+├── Views/                      # App screens
+│   ├── Components/             # UI components
+│   ├── CharactersListView/     # Main screen
+│   |   └── Components/         # Main screen components
+│   └── CharactersDetailsView/  # Details screen
+|       └── Components/         # Details screen components
+├── Models/                     # Data models
+├── ViewModels/                 # Business logic
+├── Services/                   # API call methods
+└── Utils/                      # Constants
 ```
 
-## 🏗 How It Works
+## Application Structure
 
 1. **Views**: 
-   - `MarvelCharactersListView`: The main screen with the character grid
-   - `MarvelCharacterDetailsView`: Shows character details and comics
-   - `CharacterCard`: Shows each character in the grid
-   - `ComicsVerticalScroll`: Shows comics in a horizontal scroll
+   - `CharactersListView`: The main screen with the character grid.
+   - `CharacterCard`: Shows each character in the grid.
+   - `CharacterDetailsView`: Shows character details and comics.
+   - `ComicsVerticalScroll`: Shows comics in a horizontal scroll.
+   - `ComicCard`: Shows each comic in the horizontal scroll.
 
 2. **ViewModels**:
-   - `MarvelCharactersViewModel`: Handles loading characters
-   - `MarvelCharacterComicsViewModel`: Handles loading comics
+   - `CharactersViewModel`: Handles loading characters.
+   - `CharacterComicsViewModel`: Handles loading comics.
 
 3. **Models**:
-   - `Character`: Represents a Marvel character
-   - `Comic`: Represents a Marvel comic
+   - `CharactersModel`: Represents a Marvel character.
+   - `ComicsModel`: Represents a Marvel comic.
 
 4. **Services**:
-   - `MarvelAPIService`: Makes calls to the Marvel API
+   - `MarvelAPIService`: Makes calls to the Marvel API.
 
-## 📚 What We Used
+## What was used
 
-- SwiftUI for the user interface
-- Marvel API for the data
-- Async/await for loading data
-- No external libraries - just pure Swift!
-
-## 🔑 API Keys
-
-The app uses the Marvel API. The keys are already in the project in `Constants.swift`.
-
-## 💡 Cool Features
-
-- Loads more characters as you scroll
-- Shows loading indicators
-- Handles errors nicely
-- Swipe between characters
-- Shows comics for each character
-
-## 🤔 Need Help?
-
-If something's not working:
-1. Make sure Xcode is updated
-2. Clean the build folder: `Product > Clean Build Folder`
-3. Try building and running again
-
-That's it! Have fun exploring Marvel characters! 🦸‍♂️ 
+- SwiftUI for the user interface.
+- Marvel API for the data.
+- Async/await for loading data.
+- No external libraries.

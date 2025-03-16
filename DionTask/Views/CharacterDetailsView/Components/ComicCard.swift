@@ -1,14 +1,9 @@
-//
-//  CharacterCard.swift
-//  task2
-//
-//  Created by Marios Ioannou on 13/3/25.
-//
-
 import SwiftUI
 
-struct CharacterComicCard: View {
+struct ComicCard: View {
+    
     @State private var showWebView = false
+    
     let comic: Comic
 
     private var secureImageUrl: URL? {
@@ -16,11 +11,13 @@ struct CharacterComicCard: View {
     }
 
     var body: some View {
+        
         ZStack {
+            
             AsyncImage(url: secureImageUrl) { image in
                 image.resizable().scaledToFill()
             } placeholder: {
-                Color.gray
+                Color.yellow
             }
         }
         .frame(width: 150, height: 180)
@@ -35,7 +32,7 @@ struct CharacterComicCard: View {
                 WebView(url: URL(string: detailUrl))
                     .edgesIgnoringSafeArea(.bottom)
             } else {
-                Text("URL not available.")
+                Text("webview not available")
             }
         }
     }

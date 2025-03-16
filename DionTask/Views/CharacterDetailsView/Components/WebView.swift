@@ -1,23 +1,19 @@
-//
-//  WebView.swift
-//  task2
-//
-//  Created by Marios Ioannou on 15/3/25.
-//
-
 import SwiftUI
 import WebKit
 
 struct WebView: UIViewRepresentable {
+    
     let url: URL?
     
     func makeUIView(context: Context) -> WKWebView {
+        
         let webView = WKWebView()
         webView.navigationDelegate = context.coordinator
         return webView
     }
     
     func updateUIView(_ webView: WKWebView, context: Context) {
+        
         if let url = url {
             let request = URLRequest(url: url)
             webView.load(request)

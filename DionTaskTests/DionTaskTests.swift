@@ -1,10 +1,3 @@
-//
-//  DionTaskTests.swift
-//  DionTaskTests
-//
-//  Created by Marios Ioannou on 16/3/25.
-//
-
 import Testing
 @testable import DionTask
 

@@ -1,10 +1,3 @@
-//
-//  DionTaskUITests.swift
-//  DionTaskUITests
-//
-//  Created by Marios Ioannou on 16/3/25.
-//
-
 import XCTest
 
 final class DionTaskUITests: XCTestCase {

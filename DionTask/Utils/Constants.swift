@@ -11,9 +11,9 @@ struct Constants {
         }
         
         struct ENDPOINT {
-            static let marverlCharactersEndpoint = "/v1/public/characters"
+            static let charactersEndpoint = "/v1/public/characters"
             
-            static func marverlCharactersComicsEndpoint(characterId: Int) -> String {
+            static func comicsEndpoint(characterId: Int) -> String {
                 return "/v1/public/characters/\(characterId)/comics"
             }
         }
